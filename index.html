@@ -20,12 +20,20 @@
         <div class="image"></div>
         <div><h2 class="heading">Todo List</h2></div>
       </div>
-      <div class="form-container">
-        <form action="">
-          <input type="text" id="todo-input" placeholder="Enter Todos" />
-          <button><i class="fa-solid fa-circle-plus"></i></button>
-        </form>
-      </div>
+      <form action="">
+        <div class="form-container">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Enter Todos : Eg. Meeting at 7:00"
+            class="todo-input"
+          />
+          <button class="add-button" id="add-todo">
+            <i class="fa-solid fa-circle-plus"></i>
+          </button>
+        </div>
+      </form>
+      <div id="todo-list" class="todo-list"></div>
     </div>
     <script src="./src/js/index.js" type="module"></script>
   </body>
