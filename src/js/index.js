@@ -3,7 +3,30 @@ const todoList = document.getElementById("todo-list");
 addTodo.addEventListener("click", (e) => {
   e.preventDefault();
   const newTodo = document.createElement("div");
-  newTodo.innerText = "New Todo";
   newTodo.classList.add("todo-list-item");
+  // <div></div>
+  const newTodoText = document.createElement("h5");
+  newTodoText.innerText = "ABC";
+  newTodo.appendChild(newTodoText);
+  // <div>New Todo</div>
+  // <div class="todo-list-item">New Todo</div>
+  // Check Button
+  const checkButton = document.createElement("button");
+  checkButton.classList.add("check-button");
+  checkButton.innerHTML = '<i class="fa-solid fa-square-check"></i>';
+  newTodo.appendChild(checkButton);
+  // delete element
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("delete-button");
+  deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+  newTodo.appendChild(deleteButton);
   todoList.appendChild(newTodo);
+  // <div id="todo-list">
+  // <div class="todo-list-item">New Todo</div>
+  // <div class="todo-list-item">New Todo</div>
+  // <div class="todo-list-item">New Todo</div>
+  // <div class="todo-list-item">New Todo</div>
+  // <div class="todo-list-item">New Todo</div>
+  // <div class="todo-list-item">New Todo</div>
+  // </div>
 });
