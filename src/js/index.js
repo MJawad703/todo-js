@@ -34,7 +34,14 @@ addTodo.addEventListener("click", (e) => {
   // </div>
 });
 
+// actually we capture an event.
 todoList.addEventListener("click", (e) => {
-  const parentElement = e.target.parentElement;
-  parentElement.remove();
+  if (e.target.classList[0] === "delete-button") {
+    const parentElement = e.target.parentElement;
+    parentElement.remove();
+  }
+  if (e.target.classList[0] === "check-button") {
+    const parentElement = e.target.parentElement;
+    parentElement.classList.toggle("checked");
+  }
 });

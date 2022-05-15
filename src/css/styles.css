@@ -115,3 +115,12 @@ body {
 .fa-trash {
   pointer-events: none;
 }
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.4;
+  transition: 400ms;
+}
+/* 
+.deleted {
+} */
